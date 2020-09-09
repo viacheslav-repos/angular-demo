@@ -1,0 +1,10 @@
+<ul class="currency">
+  <!-- [class.some-css-class]="some-condition" -->
+  <li *ngFor="let item of currency"
+      [class.selected]="item === selectedCurrency"
+      (click)="onSelect(item)">
+    <span class="badge">{{item.id}}</span> {{item.code}}
+  </li>
+</ul>
+
+<app-currency-detail [currency]="selectedCurrency"></app-currency-detail>
